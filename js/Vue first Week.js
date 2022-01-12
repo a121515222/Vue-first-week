@@ -48,10 +48,11 @@ const App = {
             //console.log(this.list)
         },
         delList(e) {
-            console.log(e.target.nodeName)
+            
             console.log(e.target.dataset.index)
+            
             if (e.target.nodeName === 'BUTTON') {
-                this.list.splice(e.target.dataset.index, 1)
+                this.list.splice(e.target.dataset.index, 1);
             };
             this.saveListLength()
         },
@@ -59,7 +60,6 @@ const App = {
             this.list = [];
             this.saveListLength()
         },
-
     },
     created() {
         this.saveListLength()
